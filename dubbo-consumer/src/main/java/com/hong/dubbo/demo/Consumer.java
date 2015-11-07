@@ -1,5 +1,6 @@
 package com.hong.dubbo.demo;
 
+import com.hong.dubbo.interfaces.simple.DemoService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**

@@ -1,6 +1,6 @@
 package com.hong.dubbo.demo.provider;
 
-import com.hong.dubbo.demo.DemoService;
+import com.hong.dubbo.interfaces.simple.DemoService;
 
 /**
  * Created by Hongwei on 2015/10/23.

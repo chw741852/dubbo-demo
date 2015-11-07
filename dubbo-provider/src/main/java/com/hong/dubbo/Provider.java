@@ -1,4 +1,4 @@
-package com.hong.dubbo.demo;
+package com.hong.dubbo;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

@@ -15,8 +15,16 @@
     <dubbo:protocol name="dubbo" port="20880"/>
 
     <!-- 声明需要暴露的服务接口 -->
-    <dubbo:service interface="com.hong.dubbo.demo.DemoService" ref="demoService"/>
-
+    <dubbo:service interface="com.hong.dubbo.interfaces.simple.DemoService" ref="demoService"/>
     <!-- 和本地bean一样，实现服务 -->
     <bean id="demoService" class="com.hong.dubbo.demo.provider.DemoServiceImpl"/>
+
+    <bean id="callbackService" class="com.hong.dubbo.callback.CallbackServiceImpl"/>
+    <dubbo:service interface="com.hong.dubbo.interfaces.callback.CallbackService" ref="callbackService" connections="1" callbacks="1000">
+        <dubbo:method name="addListener">
+            <dubbo:argument index="1" callback="true"/>
+            <!-- 也可以通过制定类型的形式 -->
+            <!--<dubbo:argument type="com.hong.dubbo.interfaces.callback.CallbackListener" callback="true"/>-->
+        </dubbo:method>
+    </dubbo:service>
 </beans>

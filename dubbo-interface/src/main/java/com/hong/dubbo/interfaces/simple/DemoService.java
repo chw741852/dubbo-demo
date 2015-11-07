@@ -1,4 +1,4 @@
-package com.hong.dubbo.demo;
+package com.hong.dubbo.interfaces.simple;
 
 /**
  * Created by Hongwei on 2015/10/23.
